@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+  background-image: url(./components/Images/fondo.jpg);
+}
+
+ul {
+  font-size: 20px;
+  list-style: none;
+  background-color: rgb(18, 140, 126);
+  width: 66%;
+  margin: 10px;
+}
