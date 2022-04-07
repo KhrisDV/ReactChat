@@ -10,35 +10,47 @@ function SignUp(props) {
 
   function changePassHandler(event) {
     setPassInput(event.target.value);
-    setUserInput(props.id);
   }
 
-  function authToken(id, secret) {
-    // En autenticación Basic, usuario y contraseña se separan con ':'
-    const authToken = `${id}:${secret}`;
-    // Y se codifican en Base64
-    const base64token = btoa(authToken);
-    props.setToken(`Basic ${base64token}`);
+  function registerUser() {
+    let data = JSON.stringify({ userName: userInput, password: passInput });
+    console.log(data);
+    postUser(props.url + "/login/", data);
   }
 
-  function signUser() {
-    authToken(userInput, passInput);
+  async function postUser(url, data) {
+    const response = await fetch(url, {
+      method: "POST",
+      body: data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const responseData = await response.json();
+    console.log(responseData);
+    props.setId(responseData);
   }
+
   return (
     <>
-      <h2>Login</h2>
-      <input
-        type="text"
-        placeholder="ID"
-        onChange={changeUserHandler}
-        value={props.id}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={changePassHandler}
-      />
-      <button onClick={signUser}>Login</button>
+      <div id="container">
+        <h2>Sign Up</h2>
+
+        <input
+          type="text"
+          placeholder="Username"
+          onChange={changeUserHandler}
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={changePassHandler}
+        />
+
+        <button onClick={registerUser}>Sign up</button>
+      </div>
     </>
   );
 }

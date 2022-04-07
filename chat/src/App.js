@@ -12,8 +12,8 @@ export function App() {
 
   return (
     <>
-      <LogIn setId={setId} url={host} />
-      <SignUp id={id} setToken={setToken} />
+      <SignUp setId={setId} url={host} />
+      <LogIn id={id} setToken={setToken} />
       <GetMessages url={host} token={token} />
       <SendMessage url={host} token={token} />
     </>
