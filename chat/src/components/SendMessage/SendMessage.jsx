@@ -27,11 +27,11 @@ function SendMessage(props) {
     <>
       <input
         name=""
-        id=""
+        id="inputmessage"
         onChange={changeTextHandler}
         value={textInput}
       ></input>
-      <button onClick={sendText}>Enviar</button>
+      <button id="update" onClick={sendText}>Update</button>
     </>
   );
 }

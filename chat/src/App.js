@@ -12,10 +12,16 @@ export function App() {
 
   return (
     <>
-      <SignUp setId={setId} url={host} />
-      <LogIn id={id} setToken={setToken} />
-      <GetMessages url={host} token={token} />
-      <SendMessage url={host} token={token} />
+      <div id="maincontainer">
+        <div id="users">
+          <SignUp setId={setId} url={host} />
+          <LogIn id={id} setToken={setToken} />
+        </div>
+        <div id="messages">
+          <GetMessages url={host} token={token} />
+          <SendMessage url={host} token={token} />
+        </div>
+      </div>
     </>
   );
 }

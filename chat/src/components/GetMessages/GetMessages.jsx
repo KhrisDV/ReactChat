@@ -29,7 +29,7 @@ function GetMessages(props) {
 
   return (
     <>
-      <ul>{messages}</ul>
+    <ul>{messages}</ul>
     </>
   );
 }

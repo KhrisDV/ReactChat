@@ -34,7 +34,6 @@ function SignUp(props) {
 
   return (
     <>
-      <div id="container">
         <h2>Sign Up</h2>
 
         <input
@@ -50,7 +49,6 @@ function SignUp(props) {
         />
 
         <button onClick={registerUser}>Sign up</button>
-      </div>
     </>
   );
 }
