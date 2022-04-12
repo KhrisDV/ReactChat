@@ -10,11 +10,12 @@ function GetMessages(props) {
       },
     });
     const data = await response.json();
+    
     setMessages(
       data.map((item, idx) => (
         <li key={idx}>
           {" "}
-          Usuario:{item.source} Mensaje: {item.content}
+          Usuario{item.source}: {item.content}
         </li>
       ))
     );

@@ -19,6 +19,8 @@ export function App() {
         </div>
         <div id="messages">
           <GetMessages url={host} token={token} />
+        </div>
+        <div id="send">
           <SendMessage url={host} token={token} />
         </div>
       </div>
