@@ -13,10 +13,10 @@ function GetMessages(props) {
     
     setMessages(
       data.map((item, idx) => (
-        <li key={idx}>
+        <dl key={idx}>
           {" "}
           Usuario{item.source}: {item.content}
-        </li>
+        </dl>
       ))
     );
     return data;
@@ -30,7 +30,7 @@ function GetMessages(props) {
 
   return (
     <>
-    <ul>{messages}</ul>
+    <dt>{messages}</dt>
     </>
   );
 }

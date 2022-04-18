@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import "./LogIn.css"
 
 function LogIn(props) {
   const [userInput, setUserInput] = useState("");
@@ -23,10 +24,13 @@ function LogIn(props) {
 
   function signUser() {
     authToken(userInput, passInput);
+    props.setGetMessages(true)
   }
   return (
     <>
-      <h2>Login</h2>
+    <div id="logintotal">
+      <h2>LOGIN</h2>
+      
       <input
         type="text"
         placeholder="ID"
@@ -38,7 +42,13 @@ function LogIn(props) {
         placeholder="Password"
         onChange={changePassHandler}
       />
+
+      <a href="#"onClick={()=>{
+        props.setLogin(false)
+        props.setSignUp(true)
+      }}><p> ¿No tienes cuenta? Regístrate</p></a>
       <button onClick={signUser}>Login</button>
+      </div>
     </>
   );
 }

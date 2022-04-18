@@ -34,7 +34,7 @@ function SignUp(props) {
 
   return (
     <>
-        <h2>Sign Up</h2>
+        <h2>SIGN UP</h2>
 
         <input
           type="text"
@@ -47,8 +47,12 @@ function SignUp(props) {
           placeholder="Password"
           onChange={changePassHandler}
         />
-
-        <button onClick={registerUser}>Sign up</button>
+      
+        <a href="#"onClick={()=>{
+        props.setLogin(true)
+        props.setSignUp(false)
+      }}><p>¿Ya tienes cuenta? Inicia sesión</p></a>
+      <button onClick={registerUser}>Sign up</button>
     </>
   );
 }

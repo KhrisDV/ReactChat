@@ -1,7 +1,4 @@
-body {
-  font-size: 20px;
-  background-image: url("/src/components/Images/fondo.jpg");
-}
+
 
 #maincontainer {
   display: flex;
@@ -36,23 +33,27 @@ body {
   
 }
 
-ul {
+dt {
   background-image: url("/src/components/Images/fondo.jpg");
   display: flex;
   flex-direction: column;
   list-style: none;
 }
 
-li {
-  position: relative;
+dl {
   border-radius: 15px;
   background-color: rgb(37, 211, 102);
   margin: 10px;
   padding: 2px;
 }
 
-h2 {
-  align-items: center;
-  background-color: rgb(7, 94, 84);
-  color: rgb(52, 183, 241);
+
+#inputmessage {
+  height: 30px;
+  width: 400px;
+}
+
+#update {
+  height: 35px;
+  margin: 3px;
 }
